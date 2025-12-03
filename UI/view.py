@@ -41,7 +41,7 @@ class View:
         # Riga 2 con dropdown rifugio e pulsante raggiungibili
         self.dd_rifugio = ft.Dropdown(
             label="Rifugio",
-            disabled=True,
+            disabled=False,
             width=300,
             on_change=self.controller.read_dd_rifugio if self.controller else None
         )
@@ -49,7 +49,7 @@ class View:
         self.pulsante_raggiungibili = ft.ElevatedButton(
             text="Rifugi raggiungibili",
             on_click=self.controller.handle_raggiungibili if self.controller else None,
-            disabled=True,
+            disabled=False,
             width=200
         )
         row2 = ft.Row([self.dd_rifugio, self.pulsante_raggiungibili], alignment=ft.MainAxisAlignment.CENTER)
